@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/header.css")
+        link(rel="stylesheet", href="css/section.css")
+        title Noting
+    body
+        header
+            h1 Noting
+        section
+            form(action="/", method="post")
+                .contenido    
+                    input(name="producto" type="text" min-length='5' maxlength='15' placeholder='Title' autocomplete="off" required)
+                    textarea(name="contenido", cols="30", rows="4" min-length='5' placeholder='Your note....' required)
+                    .enviar
+                        button Save
+            .the_notes
+                -for(i=0; i < notes.length; i++)
+                    #note
+                        .in
+                            .head_note
+                                h4= notes[i].title
+                                img(src="images/menu (1).svg", alt="")#menu
+                            hr
+                            #options_note
+                                a(href=`/delete/${notes[i].id}`)
+                                    img(src="images/delete.svg", alt="")
+                            .body_note= notes[i].content
+                                .time
+                                    img(src="images/time.svg", alt="time")
+                                    p=` ${time(notes[i].upload_time)}`
+    script(src="js/menu.js")
+    script(src="js/poper.js")

@@ -1,0 +1,23 @@
+{
+  "name": "inventario",
+  "version": "0.0.1",
+  "description": "An inventary webapp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "nodemon src/index.js"
+  },
+  "author": "@jheremois",
+  "license": "ISC",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "node-env-file": "^0.1.8",
+    "pug": "^3.0.0",
+    "timeago.js": "^4.0.2"
+  }
+}
