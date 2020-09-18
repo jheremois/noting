@@ -1,5 +1,5 @@
 /*              form            */
-form{
+.note_writer{
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -93,27 +93,43 @@ form{
     display: flex;
     overflow: hidden;
     justify-content: space-between;
-    transition-property: height;
     transition-duration: 100ms;
+    background-color: #a37eba;
 }
-#options_note a{
+#options_note form{
     text-decoration: none;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition-duration: 200ms;
-    background-color: #ff4747;
 }
-#options_note a:hover{
+#options_note form button{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+#options_note .delete{
+    background-color: #ff474757;
+}
+#options_note .delete:hover{
     background-color: #ff1b1b;
 }
-#options_note a img{
+#options_note .edit{
+    background-color: #1babff50;
+}
+#options_note .edit:hover{
+    background-color: #1babff;
+}
+#options_note form img{
     -webkit-filter: invert(100%);
     filter: invert(100%);
     width: 25px;
     padding: 5px 25px;
     opacity: 80%;
+}
+#options_note form input{
+    display: none;
 }
 .body_note{
     padding: 10px;
@@ -135,6 +151,46 @@ form{
     filter: invert(100%);
     width: 15px;
     margin: 6px 4px;
+}
+/*              edit            */
+.note_edit textarea{
+    resize: none;
+    outline: none;
+    width: 98.4%;
+}
+.note_edit{
+    display: flex;
+    justify-content: center;
+    padding: 50px 10px;
+}
+.note_edit #note{
+    width: 90%;
+}
+.saver{
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-4px);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #393b44;
+}
+.head_note input{
+    color: #1e2022;
+    font-size: 30px;
+    font-weight: 400;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+}
+.saver button{
+    padding: 8px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: #a37eba 3px solid;
+    cursor: pointer;
+}
+.saver button:hover{
+    background-color: #a37eba41;
 }
 /*          responsive          */
 @media screen and (max-width: 768px){

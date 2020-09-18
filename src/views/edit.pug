@@ -1,0 +1,11 @@
+extends main
+block section
+    form(action="post").note_edit
+        #note
+            .in
+                .head_note
+                    input(name='new_title' type="text" value=notes[note_front].title)
+                hr
+                textarea(name="new_note", cols="30", rows="7" autofocus).body_note= notes[note_front].content
+                .saver
+                    button save

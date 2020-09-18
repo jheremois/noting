@@ -9,11 +9,11 @@ html(lang="en")
     body
         header
             h1 Noting
-        section
-            form(action="/", method="post")
+        block section
+            form(action="/", method="post").note_writer
                 .contenido    
-                    input(name="producto" type="text" min-length='5' maxlength='15' placeholder='Title' autocomplete="off" required)
-                    textarea(name="contenido", cols="30", rows="4" min-length='5' placeholder='Your note....' required)
+                    input(name="title" type="text" min-length='5' maxlength='15' placeholder='Title' autocomplete="off" required)
+                    textarea(name="content", cols="30", rows="4" min-length='5' placeholder='Your note....' required)
                     .enviar
                         button Save
             .the_notes
@@ -25,8 +25,14 @@ html(lang="en")
                                 img(src="images/menu (1).svg", alt="")#menu
                             hr
                             #options_note
-                                a(href=`/delete/${notes[i].id}`)
-                                    img(src="images/delete.svg", alt="")
+                                form(action=`/edit`, method="post")
+                                    input(type="text" name='note_db' value=`${notes[i].id}`)
+                                    input(type="text" name='note_front' value=`${i}`)
+                                    button.edit
+                                        img(src="images/edit.svg", alt="")
+                                form(action=`/delete/${notes[i].id}`, method="post")
+                                    button.delete
+                                        img(src="images/delete.svg", alt="")
                             .body_note= notes[i].content
                                 .time
                                     img(src="images/time.svg", alt="time")
