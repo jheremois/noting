@@ -1,4 +1,5 @@
 const pool = require('../db/conection')
+const { request } = require('express')
 
 
 exports.main = (req, res)=>{
@@ -9,8 +10,8 @@ exports.main = (req, res)=>{
 
 exports.save = (req, res)=>{
 
-    let title = req.body.producto
-    let content = req.body.contenido
+    const {title} = req.body
+    const {content} = req.body
 
     pool.query(`INSERT INTO notes SET?`,{
         title,
@@ -21,8 +22,23 @@ exports.save = (req, res)=>{
 
 }
 
-exports.delete = async (req,res)=>{
-    const {id} = req.params
+exports.edit = (req, res)=>{
+
+    let note_front = parseInt(req.body.note_front)
+    let note_db = parseInt(req.body.note_db)
+
+    pool.query('SELECT * FROM notes',(err, result)=>{
+        res.render('edit', {
+            notes: result,
+            note_front,
+            note_db
+        })
+    })
+
+}
+
+exports.delete = async (req, res)=>{
+    let {id} = req.params
     
     const Delete = await pool.query(`DELETE FROM notes WHERE id = ${id}`)
 

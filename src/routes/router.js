@@ -10,7 +10,9 @@ module.exports = () =>{
 
     router.post('/', controller.save)
 
-    router.get('/delete/:id', controller.delete)
+    router.post('/edit', controller.edit)
+
+    router.post('/delete/:id', controller.delete)
 
     return router
 }
