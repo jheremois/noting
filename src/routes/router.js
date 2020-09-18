@@ -12,6 +12,8 @@ module.exports = () =>{
 
     router.post('/edit', controller.edit)
 
+    router.post('/change', controller.change)
+
     router.post('/delete/:id', controller.delete)
 
     return router

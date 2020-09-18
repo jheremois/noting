@@ -154,6 +154,7 @@
 }
 /*              edit            */
 .note_edit textarea{
+    cursor: pointer;
     resize: none;
     outline: none;
     width: 98.4%;
@@ -176,11 +177,19 @@
 }
 .head_note input{
     color: #1e2022;
-    font-size: 30px;
     font-weight: 400;
-    width: 100%;
     background-color: transparent;
     outline: none;
+}
+.write_input{
+    cursor: pointer;
+    font-size: 30px;
+    width: 95%;
+}
+.id_input{
+    opacity: 50%;
+    font-size: 20px;
+    width: 5%;
 }
 .saver button{
     padding: 8px 20px;
@@ -206,5 +215,8 @@
     }
     .head_note img{
         width: 12px;
+    }
+    .id_input{
+        width: 8%;
     }
 }

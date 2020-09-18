@@ -37,6 +37,21 @@ exports.edit = (req, res)=>{
 
 }
 
+exports.change = async (req, res)=>{
+
+    const {new_title, new_note, id} = req.body
+    
+    const the_note = {
+        title: new_title,
+        content: new_note,
+    }
+    
+    const update = await pool.query(`UPDATE notes SET ? WHERE id = ?`, [the_note, id])
+
+    res.redirect('/')
+
+}
+
 exports.delete = async (req, res)=>{
     let {id} = req.params
     
