@@ -191,9 +191,10 @@
     width: 5%;
 }
 .saver button{
-    padding: 8px 20px;
+    padding: 5px 20px;
     background-color: transparent;
     border-radius: 20px;
+    font-size: 20px;
     border: #a37eba 3px solid;
     cursor: pointer;
 }

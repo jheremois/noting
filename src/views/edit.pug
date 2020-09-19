@@ -11,8 +11,8 @@ block section
             .in
                 .head_note
                     input(name='id' type="text" value=notes[note_front].id readonly).id_input
-                    input(name='new_title' type="text" value=notes[note_front].title).write_input
+                    input(name='new_title' type="text" value=notes[note_front].title minlength='5' maxlength='15' autocomplete="off" required).write_input
                 hr
-                textarea(name="new_note", cols="30", rows="7" autofocus).body_note= notes[note_front].content
+                textarea(name="new_note", cols="30", rows="7" minlength='5' maxlength='15' required autofocus).body_note= notes[note_front].content
                 .saver
                     button save

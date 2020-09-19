@@ -1,5 +1,5 @@
 const pool = require('../db/conection')
-const { request } = require('express')
+
 
 
 exports.main = (req, res)=>{

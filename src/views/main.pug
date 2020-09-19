@@ -15,8 +15,8 @@ html(lang="en")
         block section
             form(action="/", method="post").note_writer
                 .contenido    
-                    input(name="title" type="text" min-length='5' maxlength='15' placeholder='Title' autocomplete="off" required)
-                    textarea(name="content", cols="30", rows="4" min-length='5' placeholder='Your note....' required)
+                    input(name="title" type="text" minlength='5' maxlength='15' placeholder='Title' autocomplete="off" required)
+                    textarea(name="content", cols="30", rows="4" minlength='5' placeholder='Your note....' required)
                     .enviar
                         button Save
             .the_notes

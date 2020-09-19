@@ -1,5 +1,6 @@
 const ani = document.querySelectorAll('#note')
 
+
 const pop = ()=>{
 
     for (i = 0; i < ani.length; i++) {
@@ -10,5 +11,6 @@ const pop = ()=>{
     }
 
 }
+
 
 setTimeout(()=> pop(), 200)

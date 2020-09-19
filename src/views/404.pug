@@ -1,0 +1,11 @@
+extends main
+block head
+    header
+        a(href="/")
+            h1.tit Noting
+        a(href="/")
+            h1.back Back
+block section
+    form(action="/change", method="post").note_edit
+        h1=` 404 (Page "${url}" not foud)`
+        
