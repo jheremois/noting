@@ -97,7 +97,6 @@
     background-color: #a37eba;
 }
 #options_note form{
-    text-decoration: none;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -157,7 +156,7 @@
     cursor: pointer;
     resize: none;
     outline: none;
-    width: 98.4%;
+    width: 98.2%;
 }
 .note_edit{
     display: flex;

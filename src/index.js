@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path')
-const morgan = require('morgan')
 const env = require('node-env-file')
 const {format} = require('timeago.js')
 
@@ -14,8 +13,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 // middleware:
 
 app.use(express.urlencoded({extended: true}))
-
-app.use(morgan('dev'))
 
 env('./.env')
 

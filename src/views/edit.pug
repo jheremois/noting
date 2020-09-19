@@ -1,4 +1,10 @@
 extends main
+block head
+    header
+        a(href="/")
+            h1.tit Noting
+        a(href="/")
+            h1.back Back
 block section
     form(action="/change", method="post").note_edit
         #note

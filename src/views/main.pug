@@ -2,13 +2,16 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
+        link(rel="shortcut icon", href="images/logo.ico", type="image/x-icon")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/header.css")
         link(rel="stylesheet", href="css/section.css")
         title Noting
     body
-        header
-            h1 Noting
+        block head 
+            header
+                a(href="/")
+                    h1.tit Noting
         block section
             form(action="/", method="post").note_writer
                 .contenido    
