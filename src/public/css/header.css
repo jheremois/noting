@@ -15,11 +15,21 @@
 body{
     background-color: #1e2022;
 }
+a{
+    text-decoration: none;
+}
 header{
+    justify-content: space-between;
+    display: flex;
     background-color: #393b44;
     border-bottom: #a37eba 2.3px solid;
 }
 header h1{
-    color: #a37eba;
     padding: 10px;
+}
+header .tit{
+    color: #a37eba
+}
+header .back{
+    color: #ff4234b7;
 }

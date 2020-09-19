@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
-const morgan = require('morgan')
 const env = require('node-env-file')
+const http = require('http')
 const {format} = require('timeago.js')
 
 const app = express()
@@ -15,8 +15,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(express.urlencoded({extended: true}))
 
-app.use(morgan('dev'))
-
 env('./.env')
 
 app.use((req,res,next)=>{
@@ -26,12 +24,25 @@ app.use((req,res,next)=>{
 
 // server:
 
+const server = http.createServer(app)
 const routes = require('./routes/router')
 
 app.use('/', routes())
+
+// 404
+
+app.use(function(req, res, next){
+    res.status(404)
+
+    res.render('404', { url: req.url })
+
+    return
+})
+
+// Run app
 
 app.set('port', process.env.PORT || 3000 )
 
 const port = app.get('port')
 
-app.listen(port)
+server.listen(port)
