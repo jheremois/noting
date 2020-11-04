@@ -8,7 +8,7 @@
     transform: scale(0.9);
     border-radius: 10px;
     width: 65%;
-    background-color: #393b44;
+    background-color: #151717;
     padding: 15px;
     box-shadow: 2px 3px 8px 0px #000000bf;
 }
@@ -41,13 +41,13 @@
     border-radius: 20px;
     padding: 5px;
     background-color: #30303028;
-    border: 2px solid #a37eba;
+    border: 2px solid #2361FF;
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 200ms;
 }
 .enviar button:hover{
-    background-color: #a37eba46;
+    background-color: #2361FF46;
 }
 /*           Notes              */
 .the_notes{
@@ -72,16 +72,16 @@
     word-wrap: break-word;
 }
 .head_note{
-    font-size: 28px;
+    font-size: 24pt;
     padding: 10px;
-    background-color: #a37eba;
+    background-color: #2361FF;
     display: flex;
     border-bottom: 1px #52575d solid;
 }
 .head_note h4{
-    font-weight: 500;
+    font-weight: 600;
     width: 92%;
-    color: #1e2022;
+    color: #F3F1F1;
 }
 .head_note img{
     width: 4%;
@@ -94,7 +94,7 @@
     overflow: hidden;
     justify-content: space-between;
     transition-duration: 100ms;
-    background-color: #a37eba;
+    background-color: #2361FF;
 }
 #options_note form{
     width: 100%;
@@ -131,9 +131,10 @@
     display: none;
 }
 .body_note{
+    font-weight: 300;
     padding: 10px;
-    font-size: 22px;
-    background-color: #393b44;
+    font-size: 14pt;
+    background-color: #151717;
 }
 .body_note .time{
     justify-content: flex-end;
@@ -172,7 +173,7 @@
     padding: 20px;
     display: flex;
     justify-content: flex-end;
-    background-color: #393b44;
+    background-color: #151717;
 }
 .head_note input{
     color: #1e2022;
@@ -195,11 +196,11 @@
     background-color: transparent;
     border-radius: 20px;
     font-size: 20px;
-    border: #a37eba 3px solid;
+    border: #2361FF 3px solid;
     cursor: pointer;
 }
 .saver button:hover{
-    background-color: #a37eba41;
+    background-color: #2361FF41;
 }
 /*          responsive          */
 @media screen and (max-width: 768px){

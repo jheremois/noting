@@ -1,8 +1,12 @@
+@font-face{
+    font-family: sf_pro;
+    src: url(../fonts/sf.ttf) 
+}
 *{
     padding: 0%;
     margin: 0%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #e8e8e8;
+    font-family: 'sf_pro';
+    color: #F3F1F1;
     border: none;
 }
 *::-webkit-scrollbar{
@@ -21,14 +25,14 @@ a{
 header{
     justify-content: space-between;
     display: flex;
-    background-color: #393b44;
-    border-bottom: #a37eba 2.3px solid;
+    background-color: #151717;
+    border-bottom: #2361FF 2.3px solid;
 }
 header h1{
     padding: 10px;
 }
 header .tit{
-    color: #a37eba
+    color: #2361FF
 }
 header .back{
     color: #ff4234b7;
